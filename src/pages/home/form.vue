@@ -373,7 +373,7 @@ export default {
           error: this.$t('VALID').V_9
         }
       }
-      if (!this.regionObj.s.id) {
+      if (!this.regionObj.s.id || !this.regionObj.c.id || !this.regionObj.p.id) {
         // console.log(this.regionObj)
         return {
           error: this.$t('VALID').V_5
@@ -445,7 +445,7 @@ export default {
           this.regionObj.c.name = obj.name
           this.regionObj.c.name_en = obj.name_en
           this.regionArr.p = obj.childrens
-          this.regionObj.p.id = obj.childrens[0].id
+          // this.regionObj.p.id = obj.childrens[0].id
           this.changeProvince()
           break
         }
